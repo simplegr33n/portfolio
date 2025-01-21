@@ -40,8 +40,6 @@ body {
 
 .header-name {
   position: fixed; /* Fixed position to stay on top while scrolling */
-  top: 0; /* Initial position from the top */
-  left: 2rem;
   font-size: 4em;
   margin-bottom: 0.5rem;
   transition: transform 0.3s ease-out;
@@ -225,7 +223,7 @@ body {
 }
 
 /* Mobile-specific styles */
-@media (max-width: 48rem) {
+@media (max-width: 768px) {
   .nav-link-projects .arrow-icon {
     opacity: 1; /* Ensure icons are visible on mobile */
     transform: translateY(0); /* No animation */
@@ -249,6 +247,10 @@ body {
   .project-link .arrow-icon {
     opacity: 1; /* Ensure the arrow icon is fully visible */
     transform: translateY(0); /* Reset any transformations */
+  }
+
+  .project-content-right {
+    /* opacity: 0; */
   }
 
   /* Adjust header name for mobile */
@@ -294,5 +296,14 @@ body {
     display: flex;
     gap: 0.0625rem;
     align-items: center;
+  }
+
+  .project-multi-section {
+    flex-direction: column; /* Stack items vertically on screens 768px wide or less */
+  }
+
+  .project-content-right {
+    display: flex;
+    flex-direction: column-reverse; /* Stack image above text on smaller screens */
   }
 }

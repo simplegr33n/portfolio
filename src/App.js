@@ -119,19 +119,32 @@ const Portfolio = () => {
             <p className="case-study-label">Case study coming soon</p>
           </div>
 
-          <div className="project-content">
-            <h2 className="project-title">Skyeng & Skysmart Blogs</h2>
-            <p className="project-description">
-              Improved user experience for 150k+ users by redesigning an
-              educational blog and tripled conversion rate
-            </p>
-            <p className="case-study-label">Case study coming soon</p>
+          <div className="project-content-right">
+            <div>
+              <h2 className="project-title">Skyeng & Skysmart Blogs</h2>
+              <p className="project-description">
+                Improved user experience for 150k+ users by redesigning an
+                educational blog and tripled conversion rate
+              </p>
+              <p className="case-study-label">Case study coming soon</p>
+            </div>
+
             <div className="project-image-container">
-              <img
-                src="/images/premium-english-lessons.webp"
-                alt="Skyeng & Skysmart Blogs"
-                className="project-image"
-              />
+              <picture>
+                <source
+                  srcSet="/images/premium-english-lessons-mobile.webp"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  srcSet="/images/premium-english-lessons.webp"
+                  media="(min-width: 769px)"
+                />
+                <img
+                  src="/images/premium-english-lessons.webp"
+                  alt="Skyeng & Skysmart Blogs"
+                  className="project-image"
+                />
+              </picture>
             </div>
           </div>
         </section>
