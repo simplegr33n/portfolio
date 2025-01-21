@@ -123,7 +123,7 @@ const Portfolio = () => {
           <div className="project-content">
             <div className="project-image-container">
               <img
-                src="/images/growth-experiments.webp"
+                src="images/growth-experiments.webp"
                 alt="Skyeng & Skysmart Blogs"
                 className="project-image"
               />
@@ -148,15 +148,15 @@ const Portfolio = () => {
             <div className="project-image-container">
               <picture>
                 <source
-                  srcSet="/images/premium-english-lessons-mobile.webp"
+                  srcSet="images/premium-english-lessons-mobile.webp"
                   media="(max-width: 768px)"
                 />
                 <source
-                  srcSet="/images/premium-english-lessons.webp"
+                  srcSet="images/premium-english-lessons.webp"
                   media="(min-width: 769px)"
                 />
                 <img
-                  src="/images/premium-english-lessons.webp"
+                  src="images/premium-english-lessons.webp"
                   alt="Skyeng & Skysmart Blogs"
                   className="project-image"
                 />
