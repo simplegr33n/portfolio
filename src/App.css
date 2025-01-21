@@ -18,6 +18,7 @@ body {
 
 .portfolio-container {
   min-height: 100vh;
+  min-width: 100vw;
   background-color: white;
 }
 
@@ -247,8 +248,8 @@ body {
 
   /* Adjust header name for mobile */
   .header-name {
-    position: absolute; /* Remove fixed positioning */
-    top: 0; /* Keep it at the top */
+    position: absolute; /* Remove the fixed position */
+    top: 0;
     left: 2rem;
     font-size: 4em;
     margin-bottom: 0.5rem;
@@ -259,6 +260,7 @@ body {
     z-index: 2;
     transform-origin: top left;
     transform: none; /* Remove scaling transform on mobile */
+    width: auto; /* Ensure width does not max out */
   }
 
   .header-details {
