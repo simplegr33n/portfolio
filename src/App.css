@@ -246,6 +246,11 @@ body {
     width: 100%; /* Ensure project content and images take up full width */
   }
 
+  .project-link .arrow-icon {
+    opacity: 1; /* Ensure the arrow icon is fully visible */
+    transform: translateY(0); /* Reset any transformations */
+  }
+
   /* Adjust header name for mobile */
   .header-name {
     position: absolute; /* Remove the fixed position */
@@ -280,5 +285,14 @@ body {
     left: 2rem;
     font-size: 4em;
     transition: transform 0.3s ease-out; /* Smooth transition */
+  }
+
+  .project-section {
+    margin-bottom: 6rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    gap: 0.0625rem;
+    align-items: center;
   }
 }
