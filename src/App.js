@@ -99,7 +99,7 @@ const Portfolio = () => {
         <section id="projects" className="project-section">
           <div className="project-image-container">
             <img
-              src="/images/skyeng-home-page.webp"
+              src="images/skyeng-home-page.webp"
               alt="Skyeng Home Page"
               className="project-image"
             />
