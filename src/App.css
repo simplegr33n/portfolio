@@ -8,9 +8,7 @@ body {
   min-height: 100vh;
   min-width: 34.375rem;
   font-family: "Neue Haas Grotesk", Arial, sans-serif;
-  display: flex;
   justify-content: center;
-  align-items: center;
   margin-left: auto;
   margin-right: auto;
   letter-spacing: -0.05rem;
@@ -40,6 +38,8 @@ body {
 
 .header-name {
   position: fixed; /* Fixed position to stay on top while scrolling */
+  top: 0rem;
+  left: 2rem;
   font-size: 4em;
   margin-bottom: 0.5rem;
   transition: transform 0.3s ease-out;
@@ -249,13 +249,9 @@ body {
     transform: translateY(0); /* Reset any transformations */
   }
 
-  .project-content-right {
-    /* opacity: 0; */
-  }
-
   /* Adjust header name for mobile */
   .header-name {
-    position: absolute; /* Remove the fixed position */
+    position: fixed; /* Remove the fixed position */
     top: 0;
     left: 2rem;
     font-size: 4em;
@@ -281,13 +277,6 @@ body {
   }
 
   /* Keep the header name fixed on scroll */
-  .header-name {
-    position: fixed; /* Keep it fixed as user scrolls */
-    top: 0; /* Keep at the top */
-    left: 2rem;
-    font-size: 4em;
-    transition: transform 0.3s ease-out; /* Smooth transition */
-  }
 
   .project-section {
     margin-bottom: 6rem;
