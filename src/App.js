@@ -16,29 +16,22 @@ const Portfolio = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Only run scroll handler if on mobile
-      if (!isMobile) {
+      if (isMobile) {
         setTransform("none");
         return;
       }
 
       const scrollPosition = window.scrollY;
 
-      // Define the gap after which scaling should happen
-      const gapThreshold = 190; // When scrolling past 300px
-      const maxScale = 1; // Maximum scale value (start size)
-      const minScale = 0.6; // Minimum scale value (end size)
+      const gapThreshold = 190;
+      const maxScale = 1;
+      const minScale = 0.6;
 
-      // Calculate scale based on scroll position
       let scaleValue = Math.max(
         minScale,
         Math.min(maxScale - (scrollPosition - gapThreshold) / 190, maxScale)
       );
 
-      console.log("scrollPosition", scrollPosition);
-      console.log("scalevalue:", scaleValue);
-
-      // Apply scaling and translation based on scroll
       setTransform(`scale(${scaleValue})`);
     };
 
@@ -84,10 +77,17 @@ const Portfolio = () => {
         <a
           href="https://drive.google.com/file/d/1nDWUnQwDE-Ve50OkArY_Fyyh8b7iVeiq/view?usp=sharing"
           className="nav-link"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Resume
         </a>
-        <a href="https://www.linkedin.com/in/maria-nec/" className="nav-link">
+        <a
+          href="https://www.linkedin.com/in/maria-nec/"
+          className="nav-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           LinkedIn
         </a>
         <a href="#contact" className="nav-link">
@@ -110,10 +110,15 @@ const Portfolio = () => {
               Redesigned a home page within a limited time frame and with
               limited resources, which increased a page conversion rate by 30%
             </p>
-            <a href="https://skyeng.ru/" className="project-link">
+            <a
+              href="https://skyeng.ru/"
+              className="project-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               See it live
               <span className="arrow-icon">
-                <i class="fas fa-circle-arrow-right"></i>
+                <i className="fas fa-circle-arrow-right"></i>
               </span>
             </a>
           </div>
@@ -182,10 +187,12 @@ const Portfolio = () => {
             <a
               href="https://bureau.ru/books/japanese/demo/"
               className="project-link"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               See it live
               <span className="arrow-icon">
-                <i class="fas fa-circle-arrow-right"></i>
+                <i className="fas fa-circle-arrow-right"></i>
               </span>
             </a>
           </div>
@@ -193,7 +200,12 @@ const Portfolio = () => {
 
         <div id="contact" className="contact-section">
           <p className="contact-greeting">Drop a line to get in touch</p>
-          <a href="mailto:mariaaa.nec@gmail.com" className="contact-email">
+          <a
+            href="mailto:mariaaa.nec@gmail.com"
+            className="contact-email"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             mariaaa.nec@gmail.com
           </a>
         </div>
