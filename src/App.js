@@ -173,7 +173,7 @@ const Portfolio = () => {
         <section className="project-section">
           <div className="project-image-container">
             <img
-              src="/images/japanese-textbook.webp"
+              src="images/japanese-textbook.webp"
               alt="Interactive Japanese Textbook"
               className="project-image"
             />
