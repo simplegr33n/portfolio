@@ -38,7 +38,7 @@ body {
 }
 
 .header-name {
-  position: fixed; /* Start as absolute within the normal flow */
+  position: fixed; /* Fixed position to stay on top while scrolling */
   top: 0; /* Initial position from the top */
   left: 2rem;
   font-size: 4em;
@@ -53,7 +53,7 @@ body {
 }
 
 .header-details {
-  margin-top: 20rem; /* Set an initial gap from the header */
+  margin-top: 20rem; /* Initial gap from the header */
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -135,10 +135,6 @@ body {
 
 .project-section.reverse {
   flex-direction: row-reverse;
-}
-
-.project-link {
-  color: #072ac8;
 }
 
 .project-link:hover {
@@ -227,14 +223,60 @@ body {
   color: #072ac8;
 }
 
+/* Mobile-specific styles */
 @media (max-width: 48rem) {
+  .nav-link-projects .arrow-icon {
+    opacity: 1; /* Ensure icons are visible on mobile */
+    transform: translateY(0); /* No animation */
+  }
+
+  .nav-link-projects:hover .arrow-icon {
+    opacity: 1;
+    transform: translateY(0); /* Ensure the arrow is shown on hover */
+  }
+
   .project-section,
   .project-section.reverse {
-    flex-direction: column;
+    flex-direction: column; /* Stack items vertically on mobile */
   }
 
   .project-image-container,
   .project-content {
-    width: 100%;
+    width: 100%; /* Ensure project content and images take up full width */
+  }
+
+  /* Adjust header name for mobile */
+  .header-name {
+    position: absolute; /* Remove fixed positioning */
+    top: 0; /* Keep it at the top */
+    left: 2rem;
+    font-size: 4em;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    color: #c0de28;
+    line-height: 0.8;
+    letter-spacing: -0.125rem;
+    z-index: 2;
+    transform-origin: top left;
+    transform: none; /* Remove scaling transform on mobile */
+  }
+
+  .header-details {
+    margin-top: 20rem; /* Maintain gap from header */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: space-between;
+    transition: margin-top 0.2s;
+  }
+
+  /* Keep the header name fixed on scroll */
+  .header-name {
+    position: fixed; /* Keep it fixed as user scrolls */
+    top: 0; /* Keep at the top */
+    left: 2rem;
+    font-size: 4em;
+    transition: transform 0.3s ease-out; /* Smooth transition */
   }
 }
